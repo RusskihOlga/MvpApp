@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">Mvp Auth RealmMp</string>
+
+    <!-- Fonts -->
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="roboto_condensed">sans-condensed</string>
+    <string name="roboto_black">sans-serif-black</string>
+    <string name="roboto_thin">sans-serif-thin</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+
+    <string name="error_email">Неккоректный Email</string>
+    <string name="error_password">Неккоректный пароль</string>
+    <string name="account_title">Личный кабинент</string>
+    <string name="catalog_title">Каталог товаров</string>
+    <string name="favorite_title">Избранное</string>
+    <string name="orders_title">Мои заказы</string>
+    <string name="notification_title">Мои уведомления</string>
+    <string name="name_account">Имя пользователя</string>
+    <string name="close_drawer">close</string>
+    <string name="open_drawer">open</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error">Извините что-то пошло не так, попробуйте позже</string>
+    <string name="hint_phone">Телефон:</string>
+    <string name="text_phone">+7 (913)485-54-49</string>
+    <string name="hint_address">Дом:</string>
+    <string name="text_address">Автостроителй 24 - 43, 6 этаж</string>
+    <string name="hint_comment">Комментарий:</string>
+    <string name="text_comment">Единственный офис на этаже</string>
+    <string name="hint_a">Название места доставки</string>
+    <string name="text_a">Работа</string>
+    <string name="hint_place">Улица</string>
+    <string name="text_place">Авиастроителей</string>
+    <string name="hint_house">Дом</string>
+    <string name="text_house">28</string>
+    <string name="hint_flat">Квартира</string>
+    <string name="text_flat">567</string>
+    <string name="hint_floor">Этаж</string>
+    <string name="text_floor">6</string>
+    <string name="user_profile_chooce_message">Выберите фото</string>
+</resources>

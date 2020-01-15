@@ -1,0 +1,102 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.fernandocejas.frodo'
+apply plugin: 'realm-android'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.0"
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        targetSdkVersion 28
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    flavorDimensions "mvpauth"
+    productFlavors {
+        base {
+            minSdkVersion 16
+            dimension "mvpauth"
+            applicationId 'com.android.mvpauth'
+            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+            versionCode 1
+            versionName '1.0'
+            versionNameSuffix 'base'
+        }
+        realmMp {
+            minSdkVersion 16
+            dimension "mvpauth"
+            applicationId 'com.android.mvpauth.realm'
+            testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+            versionCode 1
+            versionName '2.0'
+            versionNameSuffix 'realmMp'
+
+            realm {
+                syncEnabled = true;
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.6'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    implementation 'com.google.dagger:dagger:2.6'
+    implementation 'com.squareup.retrofit2:retrofit:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'com.squareup.flow:flow:1.0.0-alpha'
+    implementation 'com.squareup.mortar:mortar:0.20'
+    implementation 'io.reactivex:rxjava:1.2.3'
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.facebook.stetho:stetho:1.4.2'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    implementation 'id.zelory:compressor:1.0.4'
+
+    baseImplementation 'com.uphyca:stetho_realm:2.0.0'
+    baseImplementation 'com.birbit:android-priority-jobqueue:2.0.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.6@aar') {
+        transitive = true;
+    }
+
+    implementation 'com.andkulikov:transitionseverywhere:1.7.0'
+}

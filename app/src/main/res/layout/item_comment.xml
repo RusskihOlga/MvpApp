@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/spacing_normal_16">
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/comment_image" />
+
+        <TextView
+            android:id="@+id/name_user"
+            style="@style/ProductText.ProductTitle"
+            android:layout_toRightOf="@id/avatar"
+            android:text="Пользователь" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small_8"
+            android:scaleX=".5"
+            android:scaleY=".5" />
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/ProductText.CommentDescription"
+            android:layout_below="@id/name_user"
+            android:layout_alignParentRight="true"
+            android:text="2 часа назад" />
+
+
+        <TextView
+            android:id="@+id/comment"
+            style="@style/ProductText.CommentDescription"
+            android:layout_below="@id/rating"
+            android:layout_toRightOf="@id/avatar"
+            android:text="description description description description description description description description description" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

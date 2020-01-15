@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mvpauth.ui.screens.catalog.CatalogView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/product_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/indicator"
+        android:layout_alignParentTop="true"/>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_above="@+id/btn_wrap"
+        app:ci_drawable="@drawable/select_page"
+        app:ci_drawable_unselected="@drawable/unselect_page"/>
+
+    <LinearLayout
+        android:id="@+id/btn_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/add_to_card_btn"
+            style="@style/CustomButton"
+            android:layout_marginBottom="@dimen/spacing_normal_16"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:text="В Корзину"
+            android:theme="@style/StartBtn"/>
+
+    </LinearLayout>
+
+</com.android.mvpauth.ui.screens.catalog.CatalogView>

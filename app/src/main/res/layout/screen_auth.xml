@@ -1,0 +1,165 @@
+<com.android.mvpauth.ui.screens.auth.AuthView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="true"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/logo_img"
+        android:layout_width="90dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_48"
+        android:src="@drawable/avd_vector_anim"/>
+
+    <TextView
+        android:id="@+id/app_name_tx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/right_medial_margin_24"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/larger_font_40"/>
+
+    <LinearLayout
+        android:id="@+id/auth_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/social_wrap"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/panel_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            tools:background="@android:color/holo_blue_light">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/auth_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:visibility="visible"
+                tools:layout_height="44dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="6dp"
+                android:layout_marginLeft="@dimen/left_medium_margin_32"
+                android:layout_marginRight="@dimen/left_medium_margin_32"
+                android:layout_marginBottom="6dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/left_small_margin_16"
+                    android:paddingLeft="@dimen/left_small_margin_16"
+                    android:paddingTop="@dimen/left_small_margin_16"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/login_email_wrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/login_email_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Введите email"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="@dimen/normal_font_16"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/login_password_wrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:id="@+id/login_password_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Введите пароль"
+                            android:inputType="textPassword"
+                            android:textColor="@color/black"
+                            android:textColorHint="@android:color/darker_gray"
+                            android:textSize="@dimen/normal_font_16"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <Button
+                android:id="@+id/show_catalog_btn"
+                style="@style/CustomButton"
+                android:text="Смотреть каталог"
+                android:layout_gravity="bottom"
+                android:theme="@style/ShowBtn"/>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            style="@style/CustomButton"
+            android:text="Войти"
+            android:theme="@style/StartBtn"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/social_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/left_small_margin_16"
+        android:layout_marginTop="@dimen/left_small_margin_16"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/vk_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small_8"
+            android:layout_marginLeft="@dimen/left_small_margin_16"
+            android:layout_marginRight="@dimen/right_small_margin_16"
+            android:layout_marginTop="@dimen/spacing_small_8"
+            android:background="@drawable/vk_selector_btn"/>
+
+        <ImageButton
+            android:id="@+id/twitter_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small_8"
+            android:layout_marginLeft="@dimen/left_small_margin_16"
+            android:layout_marginRight="@dimen/right_small_margin_16"
+            android:layout_marginTop="@dimen/spacing_small_8"
+            android:background="@drawable/twitter_selector_btn"/>
+
+        <ImageButton
+            android:id="@+id/fb_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/spacing_small_8"
+            android:layout_marginLeft="@dimen/left_small_margin_16"
+            android:layout_marginRight="@dimen/right_small_margin_16"
+            android:layout_marginTop="@dimen/spacing_small_8"
+            android:background="@drawable/fb_selector_btn"/>
+
+    </LinearLayout>
+
+</com.android.mvpauth.ui.screens.auth.AuthView>

@@ -1,0 +1,234 @@
+<com.android.mvpauth.ui.screens.address.AddressView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/address_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_small_8"
+        android:layout_marginTop="@dimen/left_medial_margin_24"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/icon"
+            android:src="@drawable/ic_font_download_black_24dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_medium_margin_32"
+            android:layout_marginRight="@dimen/right_small_margin_16"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_a"
+                    style="@style/edit.address"
+                    android:hint="@string/hint_a"
+                    android:inputType="phone"
+                    android:text="@string/text_a"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/place_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_ll"
+        android:layout_marginBottom="@dimen/spacing_small_8"
+        android:layout_marginTop="@dimen/left_medial_margin_24"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/icon"
+            android:src="@drawable/ic_place_black_24dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/left_medium_margin_32"
+            android:layout_marginRight="@dimen/right_small_margin_16"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_place"
+                    style="@style/edit.address"
+                    android:hint="@string/hint_place"
+                    android:inputType="phone"
+                    android:text="@string/text_place"/>
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_more_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/place_ll"
+        android:layout_marginBottom="@dimen/spacing_small_8"
+        android:layout_marginLeft="@dimen/spacing_small_8"
+        android:layout_marginRight="@dimen/spacing_small_8"
+        android:layout_marginTop="@dimen/left_medial_margin_24"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_48"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_house"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_house"
+                    style="@style/edit.address"
+                    android:hint="@string/hint_house"
+                    android:inputType="phone"
+                    android:text="@string/text_house"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/gray_light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_48"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_flat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_flat"
+                    style="@style/edit.address"
+                    android:hint="@string/hint_flat"
+                    android:inputType="phone"
+                    android:text="@string/text_flat"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/gray_light"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_floor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_floor"
+                    style="@style/edit.address"
+                    android:hint="@string/hint_floor"
+                    android:inputType="phone"
+                    android:text="@string/text_floor"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/gray_light"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address_more_ll"
+        android:layout_marginBottom="@dimen/spacing_small_8"
+        android:layout_marginTop="@dimen/left_medial_margin_24"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_small_8"
+            android:layout_marginRight="@dimen/right_small_margin_16"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_comment_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edit_comment_address"
+                    style="@style/edit.address"
+                    android:hint="@string/hint_comment"
+                    android:inputType="phone"
+                    android:text="@string/text_comment"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/line_size"
+                android:background="@color/gray_light"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/add_address_btn"
+            style="@style/CustomButton"
+            android:layout_marginBottom="@dimen/spacing_normal_16"
+            android:layout_marginTop="@dimen/spacing_normal_16"
+            android:text="Добавить адрес"
+            android:theme="@style/StartBtn"/>
+
+    </LinearLayout>
+
+</com.android.mvpauth.ui.screens.address.AddressView>

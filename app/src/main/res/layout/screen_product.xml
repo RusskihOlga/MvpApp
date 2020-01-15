@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.mvpauth.ui.screens.product.ProductView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/product_card"
+        style="@style/CustomCard.ProductCard">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        app:srcCompat="@drawable/ic_shopping_basket_black_24dp"/>
+
+                    <TextView
+                        style="@style/ProductText.ProductTitle"
+                        android:text="Товар добавлен в крзину"
+                        android:textColor="@color/color_primary_dark"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/product_wrapper"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="@color/color_transparent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="16dp">
+
+                        <TextView
+                            android:id="@+id/product_name_txt"
+                            style="@style/ProductText.ProductTitle"
+                            android:text="Товар 1"/>
+
+                        <TextView
+                            android:id="@+id/product_description_txt"
+                            style="@style/ProductText.ProductDescription"
+                            android:text="description description description description description description description description description"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginTop="@dimen/spacing_small_8"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="16dp"
+                        android:scaleType="centerCrop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/spacing_normal_16">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/ProductText.LabelPrice"
+                                    android:text="Количество"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/minus_btn"
+                                        style="@style/CountBtn"
+                                        app:srcCompat="@drawable/ic_remove_black_24dp"/>
+
+                                    <TextView
+                                        android:id="@+id/product_count_txt"
+                                        style="@style/ProductText.ValuePrice"
+                                        android:text="1"/>
+
+                                    <ImageView
+                                        android:id="@+id/plus_btn"
+                                        style="@style/CountBtn"
+                                        app:srcCompat="@drawable/ic_add_black_24dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    style="@style/ProductText.LabelPrice"
+                                    android:text="Стоимость"/>
+
+                                <TextView
+                                    android:id="@+id/product_price_txt"
+                                    style="@style/ProductText.ValuePrice"
+                                    android:text="25412"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="16dp">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray_light"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="16dp">
+
+                            <Button
+                                android:id="@+id/show_more_btn"
+                                style="?attr/borderlessButtonStyle"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left|center_vertical"
+                                android:text="Подробнее"
+                                android:textAllCaps="true"
+                                android:textColor="@color/color_accent"/>
+
+                            <CheckBox
+                                android:id="@+id/favorite_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center_vertical"
+                                android:button="@drawable/favorite_selector_btn"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v7.widget.CardView>
+
+</com.android.mvpauth.ui.screens.product.ProductView>
